@@ -47,11 +47,13 @@ Review `config.yaml`. It defines:
 3. **`model_list`** — the models the gateway exposes. Right now it points to your
    vLLM instance by container name (`vllm:8000`).
 
-Edit the master key before deploying (use anything — this is a workshop VM):
+Copy the env template and set your master key:
 
 ```bash
-# Edit config.yaml and change master_key to something you'll remember
-nano config.yaml
+cp env.example .env
+# Edit both files to set the same key value
+nano .env        # set LITELLM_MASTER_KEY and LITELLM_SALT_KEY
+nano config.yaml # set master_key to match LITELLM_MASTER_KEY
 ```
 
 ---
