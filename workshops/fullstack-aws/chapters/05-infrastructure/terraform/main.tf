@@ -28,7 +28,7 @@ resource "aws_instance" "example" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = "jonathan-dameus-instance"
+    Name = "jonathan-dameus-tf-instance"
   }
 }
 
